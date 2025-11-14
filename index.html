@@ -61,17 +61,23 @@
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
       border: 2px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 700;
-      font-size: 18px;
       background: radial-gradient(circle at 20% 0, #4b5563, #020617);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .brand-text-main {
@@ -86,6 +92,11 @@
       text-transform: uppercase;
       color: var(--text-muted);
       letter-spacing: 0.12em;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
     }
 
     .header-contact {
@@ -277,8 +288,6 @@
       font-weight: 600;
     }
 
-    /* Sections */
-
     .section-row {
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
@@ -385,8 +394,6 @@
       margin-top: 6px;
     }
 
-    /* Gallery */
-
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -421,8 +428,6 @@
       font-size: 10px;
       border: 1px solid rgba(148, 163, 184, 0.7);
     }
-
-    /* Contact bar */
 
     .contact-bar {
       margin-top: 4px;
@@ -479,8 +484,6 @@
       color: var(--accent);
     }
 
-    /* Responsive */
-
     @media (max-width: 900px) {
       header {
         flex-direction: column;
@@ -512,7 +515,7 @@
         grid-template-columns: minmax(0, 1fr);
       }
       .hero-image-inner img {
-        height: 190px;
+        height: 210px;
       }
     }
   </style>
@@ -522,8 +525,10 @@
     <main class="shell">
       <header>
         <div class="brand">
-          <div class="brand-mark">UC</div>
-          <div>
+          <div class="brand-mark">
+            <img src="images/cube_with_carpenter_square.jpg" alt="Upcountry Contractors cube logo" />
+          </div>
+          <div class="header-text">
             <div class="brand-text-main">Upcountry Contractors LLC</div>
             <div class="brand-text-sub">Remodeling &amp; Home Improvement • Upstate SC</div>
           </div>
@@ -540,7 +545,7 @@
       <section class="hero">
         <div>
           <div class="hero-badge">
-            Upstate South Carolina • Local &amp; Licensed
+            Upstate South Carolina • Owner-Operated
           </div>
           <h1 class="hero-title">
             Remodeling that respects your <span>home</span> and your <span>budget</span>.
@@ -571,17 +576,16 @@
         <aside class="hero-media">
           <div class="hero-image">
             <div class="hero-image-inner">
-              <!-- Replace this image path with a local file in your repo: /images/hero-kitchen.jpg -->
-              <img src="images/hero-kitchen.jpg" alt="Warm, remodeled kitchen space by Upcountry Contractors" />
+              <img src="images/garrett_smiling.jpeg" alt="Garrett, owner of Upcountry Contractors LLC" />
             </div>
             <div class="hero-image-tag">
-              <span>Before → After</span> Real Upstate remodel (client project)
+              <span>Owner-Operated</span> Local contractor you can talk to.
             </div>
           </div>
           <div class="hero-media-footer">
             <div>
-              <strong>Detail-driven craftsmanship</strong><br />
-              Kitchens, baths, trim, flooring, and outdoor living.
+              <strong>Hands-on project management</strong><br />
+              You work directly with the person responsible for the quality.
             </div>
             <div>
               <strong>Free estimates</strong><br />
@@ -677,22 +681,19 @@
           <div class="card-kicker">Upstate South Carolina</div>
         </div>
         <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 8px;">
-          Here are a few examples of the kind of work we do. These can be swapped out with your own project photos as the gallery grows.
+          A few examples of the kind of work we do. These can be swapped out with additional project photos as the gallery grows.
         </p>
         <div class="gallery">
           <div class="gallery-item">
-            <!-- Local image: /images/gallery-kitchen.jpg -->
-            <img src="images/gallery-kitchen.jpg" alt="Upcountry Contractors kitchen remodel" />
+            <img src="images/Kitchen1.jpg" alt="Upcountry Contractors kitchen remodel" />
             <div class="gallery-label">Kitchen refresh</div>
           </div>
           <div class="gallery-item">
-            <!-- Local image: /images/gallery-bath.jpg -->
-            <img src="images/gallery-bath.jpg" alt="Updated bathroom tile and fixtures" />
+            <img src="images/bathroom1.jpg" alt="Updated bathroom tile and fixtures" />
             <div class="gallery-label">Bathroom upgrade</div>
           </div>
           <div class="gallery-item">
-            <!-- Local image: /images/gallery-deck.jpg -->
-            <img src="images/gallery-deck.jpg" alt="Repaired deck and outdoor living area" />
+            <img src="images/outdoor1.jpg" alt="Repaired deck and outdoor living area" />
             <div class="gallery-label">Deck &amp; exterior</div>
           </div>
         </div>
@@ -702,11 +703,11 @@
             <strong>Service area:</strong> Greenville, Easley, Simpsonville, Greer, and surrounding Upstate SC communities.
           </div>
           <div class="contact-links">
-            <a href="tel:YOUR-PHONE-NUMBER">
+            <a href="tel: (864) 660-9913">
               <span class="icon">📞</span>
               Call/Text Now
             </a>
-            <a href="mailto:you@example.com?subject=Upcountry%20Contractors%20Project%20Photos">
+            <a href="mailto:upcountrycontractors@gmail.com">
               <span class="icon">📷</span>
               Email Project Photos
             </a>
@@ -722,3 +723,4 @@
   </div>
 </body>
 </html>
+
