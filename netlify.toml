@@ -1,0 +1,15 @@
+# Netlify configuration for Upcountry Contractors
+
+[build]
+  command   = "npm run build"
+  publish   = "docs/browser"
+
+# Redirects for Angular single-page app (SPA) routing
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
+
+# Optional: environment overrides
+[build.environment]
+  NODE_VERSION = "18"
